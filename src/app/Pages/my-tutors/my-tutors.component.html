@@ -1,0 +1,15 @@
+<div class="px-6 pt-6 2xl:container">
+  <h1 class="text-2xl py-7">My Tutors</h1>
+
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div *ngFor="let tutor of tutors">
+      <app-tutor-card [tutor]="tutor"></app-tutor-card>
+    </div>
+    <!-- <app-tutor-card></app-tutor-card>
+    <app-tutor-card></app-tutor-card>
+    <app-tutor-card></app-tutor-card>
+    <app-tutor-card></app-tutor-card>
+    <app-tutor-card></app-tutor-card>
+    <app-tutor-card></app-tutor-card> -->
+  </div>
+</div>

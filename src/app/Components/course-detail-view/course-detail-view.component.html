@@ -1,0 +1,127 @@
+<div>
+  <h1 class="m-10 p-6 text-3xl">Course Title</h1>
+  <div class="w-3/4 mx-auto border p-10 mt-10 rounded-lg">
+    <h2
+      class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl dark:text-white"
+    >
+      About Course
+    </h2>
+    <p class="font-normal text-gray-500 dark:text-gray-400">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus vel
+      itaque nulla asperiores ad? Sint, quaerat voluptatum asperiores labore
+      eius nemo eligendi tempora. Deserunt vel necessitatibus maxime excepturi
+      deleniti unde dolor nulla expedita accusantium autem. Cum distinctio
+      molestias laborum, accusamus quam laudantium odio quod, unde minima,
+      provident illo neque suscipit.
+    </p>
+  </div>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap justify-center">
+        <div
+          class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60"
+        >
+          <h2
+            class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2"
+          >
+            Time
+          </h2>
+          <p class="leading-relaxed text-base mb-4">
+            Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+            hexagon disrupt edison bulbche.
+          </p>
+        </div>
+
+        <div
+          class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60"
+        >
+          <h2
+            class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2"
+          >
+            Room
+          </h2>
+          <p class="leading-relaxed text-base mb-4">
+            Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+            hexagon disrupt edison bulbche.
+          </p>
+        </div>
+
+        <div
+          class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60"
+        >
+          <h2
+            class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2"
+          >
+            Tutor
+          </h2>
+          <p class="leading-relaxed text-base mb-4">
+            Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+            hexagon disrupt edison bulbche.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="w-10/12 mx-auto">
+    <div class="flex justify-between mb-1">
+      <span>Progress</span>
+      <span class="text-sm font-medium text-blue-700 dark:text-white"
+        >{{ percentage }}%</span
+      >
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-6 dark:bg-gray-700">
+      <!-- progress change here -->
+      <div
+        class="bg-blue-600 h-6 rounded-full"
+        [ngStyle]="{ 'max-width.px': percentage }"
+      ></div>
+    </div>
+
+    <div class="mt-10">
+      <h2>Course Files</h2>
+      <div class="flex justify-evenly">
+        <div class="flex">
+          <span class="h-12 w-10 mr-3"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M0 64C0 28.65 28.65 0 64 0H224V128C224 145.7 238.3 160 256 160H384V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64zM256 128V0L384 128H256z"
+              /></svg
+          ></span>
+          <p>
+            {{ submitted }} <br />
+            Submitted
+          </p>
+        </div>
+        <div class="flex">
+          <span class="h-12 w-10 mr-2"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path
+                d="M0 64C0 28.65 28.65 0 64 0H224V128C224 145.7 238.3 160 256 160H384V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64zM256 128V0L384 128H256z"
+              /></svg></span
+          ><br />
+          <p>{{ incomplete }} <br />Missing</p>
+        </div>
+        <div class="py-2">
+          <div (click)="openAttachmentModal()">
+            <button mat-raised-button>
+              +
+
+              <span> Upload File</span>
+            </button>
+          </div>
+          <br />
+          <div (click)="viewFileModal()">
+            <button mat-raised-button class="w-full">
+              x
+
+              <span> View Files</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

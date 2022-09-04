@@ -1,0 +1,25 @@
+<div class="md:col-span-2 lg:col-span-1">
+  <div
+    role="status"
+    class="p-4 max-w-sm rounded border border-gray-200 shadow md:p-6 dark:border-gray-700"
+  >
+    <div
+      class="flex justify-center items-center mb-4 h-48 bg-gray-300 rounded dark:bg-gray-700"
+    >
+      <!-- <img
+        src="https://images.pexels.com/photos/714699/pexels-photo-714699.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        alt=""
+        class="w-full h-full object-cover"
+      /> -->
+      <img src="{{ course.image }}" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="rounded-full dark:bg-gray-700 w-48 mb-4 px-2">
+      {{ course.course }}
+    </div>
+    <div class="h-48">
+      {{ course.content }}
+    </div>
+
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>

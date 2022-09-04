@@ -1,0 +1,14 @@
+<app-side-menu *ngIf="auth.isLoggedIn$ | async"></app-side-menu>
+<div
+  *ngIf="auth.isLoggedIn$ | async"
+  class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]"
+>
+  <app-header *ngIf="auth.isLoggedIn$ | async"></app-header>
+  <router-outlet></router-outlet>
+</div>
+<div *ngIf="auth.isLoggedOut$ | async">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <app-register></app-register> -->
+<!-- <app-login></app-login> -->
