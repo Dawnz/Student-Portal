@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Course } from '../Interfaces/course';
 import { CourseWork } from '../Interfaces/coursework';
-const COURSEWORK_API = 'http://localhost:4000/coursework';
+import { environment } from 'src/environments/environment';
+
+const COURSEWORK_API = `${environment.baseUrl}/coursework`;
 @Injectable({
   providedIn: 'root',
 })
